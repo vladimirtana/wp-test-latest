@@ -46,15 +46,14 @@ define( 'DB_COLLATE', '' );
  *
  * @since 2.6.0
  */
-define( 'AUTH_KEY',         'put your unique phrase here' );
-define( 'SECURE_AUTH_KEY',  'put your unique phrase here' );
-define( 'LOGGED_IN_KEY',    'put your unique phrase here' );
-define( 'NONCE_KEY',        'put your unique phrase here' );
-define( 'AUTH_SALT',        'put your unique phrase here' );
-define( 'SECURE_AUTH_SALT', 'put your unique phrase here' );
-define( 'LOGGED_IN_SALT',   'put your unique phrase here' );
-define( 'NONCE_SALT',       'put your unique phrase here' );
-
+define('AUTH_KEY',         'bJ4:yOl:jKfxvCHp*K7NVAG^!.g(OT*NEu6F/xA;JhXu0K)_T=YhX*<@LaSPY](y');
+define('SECURE_AUTH_KEY',  'q%=9(MAt^gW]Q+G8+#d,Na`A||KuI2+OR|3$8DRC+H<c mztSC,y*g#U~>+_VU7|');
+define('LOGGED_IN_KEY',    'H7Sa$7;h;/s<zv*1!^aFE7 xVg1qu!QS1O/j3a)eCkv~s96,K#AM)epD<1-Wxf(J');
+define('NONCE_KEY',        'o}jIsf+tt)NMP5P37r`:7xetEeO!O1Iw{u=Pu@+DEbDP!>% `A{g--AFldo;4PC)');
+define('AUTH_SALT',        '+K!Wo}+Gznmb-ht6vcoD3 |A_:/s7q1E!3<Z +5R=da+>xBWgs7~Vl7D-j|o9-r*');
+define('SECURE_AUTH_SALT', 'Ak0kaZzMAmdQD:lU$ZWZ2u;J|#&VN&n^Cd+eac +X]{Hm+.UPVf[I0YC@@BB;M=v');
+define('LOGGED_IN_SALT',   '6$^J8__ByUipwE`]gu5L42SK`6#Q&u6%.KvM&!z&Peb9tcO{bz45J0n>1h-{#<~}');
+define('NONCE_SALT',       '[uCp/hOpI,TC;u}sn-+Wlgv;-(be:K+fjJ(,H=O!_/+aF<}:0_>f49y7W~viMC/Z');
 /**#@-*/
 
 /**
@@ -80,7 +79,8 @@ $table_prefix = 'wp_';
 define( 'WP_DEBUG', false );
 
 /* Add any custom values between this line and the "stop editing" line. */
-
+if ($_SERVER['HTTP_X_FORWARDED_PROTO'] == 'https')
+   $_SERVER['HTTPS']='on';
 
 
 /* That's all, stop editing! Happy publishing. */
